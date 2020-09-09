@@ -10,9 +10,12 @@
 euclidean <-
 function(digit1,digit2){
   stopifnot(is.numeric(digit1),is.numeric(digit2),length(digit1)==1,length(digit2)==1)
-  if (digit1==0){
-    return(digit2)
+  n1=abs(digit1)
+  n2=abs(digit2)
+  r=n1%%n2
+  if (r==0){
+    return(n2)
   } else {
-    return(euclidean(digit2%%digit1,digit1))
+    return(euclidean(n2,r))
   }
 }
