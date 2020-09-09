@@ -5,8 +5,6 @@
 #' @return The shortest distance from \code{init_node} to all other nodes in the graph.
 #' @references https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 #' @references https://en.wikipedia.org/wiki/Graph#Mathematics
-#' @examples
-#' dijkstra(wiki_graph, 1)
 #' @export
 
 dijkstra <- function(graph,init_node){

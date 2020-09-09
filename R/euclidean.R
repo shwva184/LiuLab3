@@ -5,9 +5,6 @@
 #' @description Implementation ofEuclidian algorithm to find the greatest common divisor of two numbers.
 #' @return The euclidean of \code{digit1} and \code{digit2}.
 #' @references https://en.wikipedia.org/wiki/Euclidean_algorithm
-#' @examples
-#' euclidean(1, 1)
-#' euclidean(10, 1)
 #' @export
 
 euclidean <-

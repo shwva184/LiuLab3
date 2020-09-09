@@ -17,10 +17,6 @@ The euclidean of \code{digit1} and \code{digit2}.
 \description{
 Implementation ofEuclidian algorithm to find the greatest common divisor of two numbers.
 }
-\examples{
-euclidean(1, 1)
-euclidean(10, 1)
-}
 \references{
 https://en.wikipedia.org/wiki/Euclidean_algorithm
 }
