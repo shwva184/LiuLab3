@@ -1,4 +1,12 @@
+#' Euclidean of two numbers.
+#' 
+#' @param graph A dataframe with 3 variables v1, v2 and w ie edges of the graph from v1 to v2 with weight w.
+#' @param init_node A number which is considered to be the initial point.
+#' @return The shortest distance from \code{init_node} to all other nodes in the graph.
+#' @examples
+#' dijkstra(wiki_graph, 1)
 #' @export
+
 dijkstra <- function(graph,init_node){
   stopifnot(is.data.frame(graph),length(graph)==3,names(graph[1])=="v1",names(graph[2])=="v2",names(graph[3])=="w", length(init_node)==1,is.numeric(init_node))
   newgraph=cppRouting::makegraph(graph)
