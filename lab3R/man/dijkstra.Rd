@@ -2,7 +2,7 @@
 % Please edit documentation in R/dijkstra.R
 \name{dijkstra}
 \alias{dijkstra}
-\title{Euclidean of two numbers.}
+\title{Implementation of dijkstra algorithm to find the shortest distance.}
 \usage{
 dijkstra(graph, init_node)
 }
@@ -15,8 +15,13 @@ dijkstra(graph, init_node)
 The shortest distance from \code{init_node} to all other nodes in the graph.
 }
 \description{
-Euclidean of two numbers.
+This algorithm caculates the shortest distance between initial node and all the other nodes and saves the result into a vector.
 }
 \examples{
 dijkstra(wiki_graph, 1)
+}
+\references{
+https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+
+https://en.wikipedia.org/wiki/Graph#Mathematics
 }
