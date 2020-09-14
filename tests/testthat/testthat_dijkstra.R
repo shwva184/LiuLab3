@@ -8,6 +8,7 @@ wiki_graph <-
 test_that("outputs are correct in the Dijkstra algorithm.", {
   expect_equal(dijkstra(wiki_graph,1), c(0,7,9,20,20,11))
   expect_equal(dijkstra(wiki_graph,3), c(9,10,0,11,11,2))
+  expect_equal(dijkstra(wiki_graph,6), c(11,12,2,13,9,0))
 })
 
 
@@ -19,5 +20,7 @@ test_that("Error messages are returned for erronous input in the Dijkstra algori
   expect_error(dijkstra(wiki_wrong_graph, 3))
   expect_error(dijkstra(wiki_graph, 7))
   expect_error(dijkstra(as.matrix(wiki_graph), 3))  
+  expect_error(dijkstra(wiki_graph, 0.2))
+  expect_error(dijkstra(wiki_graph, "3"))
 })
 
