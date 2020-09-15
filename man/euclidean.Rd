@@ -15,7 +15,7 @@ euclidean(digit1, digit2)
 The euclidean of \code{digit1} and \code{digit2}.
 }
 \description{
-Implementation ofEuclidian algorithm to find the greatest common divisor of two numbers.
+Implementation of Euclidean algorithm to find the greatest common divisor of two numbers.
 }
 \references{
 https://en.wikipedia.org/wiki/Euclidean_algorithm

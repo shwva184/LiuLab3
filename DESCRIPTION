@@ -2,10 +2,10 @@ Package: lab3R
 Type: Package
 Title: Package To Check Euclidean And Dijkstra Algorithm
 Version: 1.0
-Date: 2020-09-08
-Author: shwetha ,suhani
-Maintainer: shwetha <shwva184@student.liu.se>, suhani <suhar073@student.liu.se>
-Description: The package contains functions for euclidean, dijkstras algorithm. algorithm.
+Date: 2020-09-08""
+Author: shwetha ,suhani, Hoda
+Maintainer: shwetha <shwva184@student.liu.se>, suhani <suhar073@student.liu.se>, hoda<hodfa840@student.liu.se>
+Description: The package contains functions for euclidean, dijkstras algorithm.
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

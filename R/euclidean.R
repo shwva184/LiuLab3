@@ -2,7 +2,7 @@
 #' 
 #' @param digit1 A number.
 #' @param digit2 A number.
-#' @description Implementation ofEuclidian algorithm to find the greatest common divisor of two numbers.
+#' @description Implementation of Euclidean algorithm to find the greatest common divisor of two numbers.
 #' @return The euclidean of \code{digit1} and \code{digit2}.
 #' @references https://en.wikipedia.org/wiki/Euclidean_algorithm
 #' @export

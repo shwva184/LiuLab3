@@ -15,7 +15,7 @@ dijkstra(graph, init_node)
 The shortest distance from \code{init_node} to all other nodes in the graph.
 }
 \description{
-This algorithm caculates the shortest distance between initial node and all the other nodes and saves the result into a vector.
+This algorithm calculates the shortest distance between initial node and all the other nodes and saves the result into a vector.
 }
 \references{
 https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm

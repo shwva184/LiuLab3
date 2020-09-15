@@ -1,7 +1,7 @@
 #' Implementation of dijkstra algorithm to find the shortest distance.
 #' @param graph A dataframe with 3 variables v1, v2 and w ie edges of the graph from v1 to v2 with weight w.
 #' @param init_node A number which is considered to be the initial point.
-#' @description This algorithm caculates the shortest distance between initial node and all the other nodes and saves the result into a vector.
+#' @description This algorithm calculates the shortest distance between initial node and all the other nodes and saves the result into a vector.
 #' @return The shortest distance from \code{init_node} to all other nodes in the graph.
 #' @references https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 #' @references https://en.wikipedia.org/wiki/Graph#Mathematics

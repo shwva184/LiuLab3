@@ -3,9 +3,9 @@
 \docType{data}
 \name{wiki_graph}
 \alias{wiki_graph}
-\title{Data containinng nodes and weights of graph}
+\title{Data containing nodes and weights of graph}
 \format{
-A data frame with 54 rows and 3 variables:
+A data frame with 18 rows and 3 variables:
 \describe{
   \item{v1}{edges of the graph-from}
   \item{v2}{edges of the graph-to}
