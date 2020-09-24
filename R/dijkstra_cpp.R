@@ -7,7 +7,7 @@
 #' @references https://en.wikipedia.org/wiki/Graph#Mathematics
 #' @export
 
-dijkstra <- function(graph,init_node){
+dijkstra_cpp <- function(graph,init_node){
   stopifnot(is.data.frame(graph),length(graph)==3,names(graph[1])=="v1",names(graph[2])=="v2",names(graph[3])=="w", length(init_node)==1,is.numeric(init_node))
   newgraph=cppRouting::makegraph(graph)
   visited=vector()
