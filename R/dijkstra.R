@@ -7,19 +7,31 @@
 #' @references https://en.wikipedia.org/wiki/Graph#Mathematics
 #' @export
 
-dijkstra <- function(graph,init_node){
-  stopifnot(is.data.frame(graph),length(graph)==3,names(graph[1])=="v1",names(graph[2])=="v2",names(graph[3])=="w", length(init_node)==1,is.numeric(init_node))
-  newgraph=cppRouting::makegraph(graph)
-  visited=vector()
-  j=1
-  res=vector()
-  to=unlist(graph[1])
-  for (i in 1:length(to)){
-    if((to[i]%in%visited)==FALSE){
-      res[j]=suppressMessages(cppRouting::get_distance_pair(newgraph,init_node,to[i],algorithm = "bi" ))
-      j=j+1
-      visited=append(visited,to[i])
+dijkstra=function(graph, init_node)
+{
+  stopifnot(is.data.frame(graph),length(graph)==3,names(graph[1])=="v1",
+            names(graph[2])=="v2",names(graph[3])=="w", length(init_node)==1,
+            is.numeric(init_node))
+  queue=vector()
+  distance=vector()
+  v1=graph$v1
+  v2=graph$v2
+  N=unique(c(v1, v2))
+  distance[N]=Inf
+  queue[N]=N
+  distance[init_node]=0
+  while (!all(is.na(queue))) {
+    current_distance=queue[which.min(distance[queue])]
+    queue=queue[!(queue %in% current_distance)]
+    neighbour=v2[v1 == current_distance]
+    for (v in neighbour) {
+      w=graph[v1 == current_distance & v2 == v,"w"]
+      new_distance=distance[current_distance] + w
+      
+      if (new_distance < distance[v]) {
+        distance[v]=new_distance
+      }
     }
-  }
-  return(res)
+  } 
+  return(distance)
 }
