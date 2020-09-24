@@ -11,7 +11,8 @@ dijkstra=function(graph, init_node)
 {
   stopifnot(is.data.frame(graph),length(graph)==3,names(graph[1])=="v1",
             names(graph[2])=="v2",names(graph[3])=="w", length(init_node)==1,
-            is.numeric(init_node))
+            is.numeric(init_node),
+            init_node%in%c(graph$v1,graph$v2))
   queue=vector()
   distance=vector()
   v1=graph$v1
